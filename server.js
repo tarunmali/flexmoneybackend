@@ -4,7 +4,7 @@ const app=express();
 var cors = require('cors')
 const connectDB=require('./DB/connection');
 
-
+// const MongoClient = require('mongodb').MongoClient;
 // Rest of your application code follows...
 
 
@@ -30,7 +30,7 @@ const middleware=(req,res, next )=>{
 
 
 app.use('/Api/signup', require('./Api/signup'));
-app.use('/Api/signin', require('./Api/signin'));
+// app.use('/Api/signin', require('./Api/signin'));
 // app.use('/Api/addGuardian', require('./Api/addGuardian'));
 // app.use('/Api/viewGuardian', require('./Api/viewGuardian'));
 // app.use('/Api/editcustomtext', require('./Api/editcustomtext'));
@@ -47,9 +47,9 @@ app.listen(Port, () => {
 
 
 
-  app.get('/signin', (req, res) => {
-    res.send("sign in");
-});
+//   app.get('/signin', (req, res) => {
+//     res.send("sign in");
+// });
 
 
 app.get('/signup', (req, res) => {
