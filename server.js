@@ -29,7 +29,7 @@ const middleware=(req,res, next )=>{
 
 
 
-// app.use('/Api/signup', require('./Api/signup'));
+app.use('/Api/signup', require('./Api/signup'));
 // app.use('/Api/signin', require('./Api/signin'));
 // app.use('/Api/addGuardian', require('./Api/addGuardian'));
 // app.use('/Api/viewGuardian', require('./Api/viewGuardian'));
@@ -52,9 +52,9 @@ app.listen(Port, () => {
 // });
 
 
-// app.get('/signup', (req, res) => {
-//     res.send("signup");
-// });
+app.get('/signup', (req, res) => {
+    res.send("signup");
+});
 
 // app.get('/addGuardian', (req, res) => {
 //     res.send("Add Guardian");
