@@ -3,8 +3,8 @@ const User=require('../DB/user');
 const route=express.Router();
 
 route.post('/',async(req,res)=>{
-    const {name, email, phone, gender, password, confirmpassword,age,address}=req.body;
-    if (name==="" || email==="" ||age===""  || phone==="" || gender==""|| password==="" || confirmpassword===""  || address==="") {
+    const {name, email, age, phone, password, cpassword}=req.body;
+    if (name==="" || email===""  ||age===""   || phone==="" || password==="" || cpassword==="") {
        return res.status(422).json({error:"Please fill all the fields"}); 
     }
 
@@ -14,7 +14,7 @@ route.post('/',async(req,res)=>{
         return res.status(422).json({error:"Email already registered"});
     }
 
-    else if(password!=confirmpassword){
+    else if(password!=cpassword){
         return res.status(422).json({error:"Password doesn't match"});
     }
 

@@ -29,8 +29,8 @@ const middleware=(req,res, next )=>{
 
 
 
-// app.use('/Api/signup', require('./Api/signup'));
-// app.use('/Api/signin', require('./Api/signin'));
+app.use('/Api/signup', require('./Api/signup'));
+app.use('/Api/signin', require('./Api/signin'));
 // app.use('/Api/addGuardian', require('./Api/addGuardian'));
 // app.use('/Api/viewGuardian', require('./Api/viewGuardian'));
 // app.use('/Api/editcustomtext', require('./Api/editcustomtext'));
@@ -47,14 +47,14 @@ app.listen(Port, () => {
 
 
 
-//   app.get('/signin', (req, res) => {
-//     res.send("sign in");
-// });
+  app.get('/signin', (req, res) => {
+    res.send("sign in");
+});
 
 
-// app.get('/signup', (req, res) => {
-//     res.send("signup");
-// });
+app.get('/signup', (req, res) => {
+    res.send("signup");
+});
 
 // app.get('/addGuardian', (req, res) => {
 //     res.send("Add Guardian");
